@@ -126,7 +126,7 @@
   <ItemGroup>
     <Compile Include="ActionCommand.cs" />
     <Compile Include="StoreLauncher.cs" />
-    <Compile Include="ValueHelper.cs" />
+    <Compile Include="ConvertValue.cs" />
     <Compile Include="WindowsVersion.cs" />
     <Compile Include="Xaml\Converters.cs" />
     <Compile Include="DeviceHelper.cs" />

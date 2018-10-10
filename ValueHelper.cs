@@ -7,16 +7,11 @@ using Windows.UI.Xaml;
 
 namespace UniversalPlatformTools
 {
-    public static class ValueHelper
+    public static class ConvertValue
     {
-        public static Visibility BooleanToVisibility(bool value)
+        public static Visibility ToVisibility(bool value)
         {
             return value ? Visibility.Visible : Visibility.Collapsed;
         }
-        public static bool VisibilityToBoolean(Visibility value)
-        {
-            return value == Visibility.Visible;
-        }
-
     }
 }

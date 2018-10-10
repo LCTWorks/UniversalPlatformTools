@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace LCTWorks.UniversalPlatformTools
+namespace UniversalPlatformTools
 {
     /// <summary>
     /// An implementation of <see cref="ICommand"/> wrapping a method of type <see cref="Action"/>/>.

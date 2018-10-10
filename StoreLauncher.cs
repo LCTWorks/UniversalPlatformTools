@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 
-namespace LCTWorks.UniversalPlatformTools
+namespace UniversalPlatformTools
 {
     /// <summary>
     /// Provides methods to launch the Store App with custom parameters.

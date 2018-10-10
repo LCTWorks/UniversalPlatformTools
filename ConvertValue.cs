@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 
-namespace LCTWorks.UniversalPlatformTools
+namespace UniversalPlatformTools
 {
     public static class ConvertValue
     {

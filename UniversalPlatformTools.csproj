@@ -125,6 +125,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ActionCommand.cs" />
+    <Compile Include="BaseNotifier.cs" />
     <Compile Include="StoreLauncher.cs" />
     <Compile Include="ConvertValue.cs" />
     <Compile Include="WindowsVersion.cs" />

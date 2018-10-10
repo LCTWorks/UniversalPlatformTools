@@ -65,7 +65,7 @@ namespace UniversalPlatformTools
         /// Returns wether this version is bigger or equal than the known Windows version.
         /// </summary>
         /// <param name="knownVersion">The known Windows version</param>
-        public bool IsCompatibleWith(KnownWindowsVersions knownVersion)
+        public bool IsCompatibleWith(KnownWindowsVersion knownVersion)
         {
             var compatibleVersion = GetKnownVersion(knownVersion);
             return Build >= compatibleVersion.Build;
@@ -74,12 +74,12 @@ namespace UniversalPlatformTools
         /// Get version details based on a known Windows version.
         /// </summary>
         /// <param name="version">The known Windows version</param>
-        public static WindowsVersion GetKnownVersion(KnownWindowsVersions version)
+        public static WindowsVersion GetKnownVersion(KnownWindowsVersion version)
         {
             switch (version)
             {
                 default:
-                case KnownWindowsVersions.RTM:
+                case KnownWindowsVersion.RTM:
                     {
                         return new WindowsVersion()
                         {
@@ -89,7 +89,7 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 1,
                         };
                     }
-                case KnownWindowsVersions.NovemberUpdate:
+                case KnownWindowsVersion.NovemberUpdate:
                     {
                         return new WindowsVersion()
                         {
@@ -99,7 +99,7 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 2,
                         };
                     }
-                case KnownWindowsVersions.AnniversaryUpdate:
+                case KnownWindowsVersion.AnniversaryUpdate:
                     {
                         return new WindowsVersion()
                         {
@@ -109,7 +109,7 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 3,
                         };
                     }
-                case KnownWindowsVersions.CreatorsUpdate:
+                case KnownWindowsVersion.CreatorsUpdate:
                     {
                         return new WindowsVersion()
                         {
@@ -119,7 +119,7 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 4,
                         };
                     }
-                case KnownWindowsVersions.FallCreatosUpdate:
+                case KnownWindowsVersion.FallCreatosUpdate:
                     {
                         return new WindowsVersion()
                         {
@@ -129,7 +129,7 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 5,
                         };
                     }
-                case KnownWindowsVersions.April2018Update:
+                case KnownWindowsVersion.April2018Update:
                     {
                         return new WindowsVersion()
                         {
@@ -139,7 +139,7 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 6,
                         };
                     }
-                case KnownWindowsVersions.October2018Update:
+                case KnownWindowsVersion.October2018Update:
                     {
                         return new WindowsVersion()
                         {
@@ -188,27 +188,27 @@ namespace UniversalPlatformTools
             var knownVersion = GetKnownVersion(baseVersion);
             return GetKnownVersion(knownVersion);
         }
-        private static KnownWindowsVersions GetKnownVersion(Version version)
+        private static KnownWindowsVersion GetKnownVersion(Version version)
         {
             if (version == VERSION_RTM)
-                return KnownWindowsVersions.RTM;
+                return KnownWindowsVersion.RTM;
             if (version == VERSION_NOVEMBER)
-                return KnownWindowsVersions.NovemberUpdate;
+                return KnownWindowsVersion.NovemberUpdate;
             if (version == VERSION_ANNIVERSARY)
-                return KnownWindowsVersions.AnniversaryUpdate;
+                return KnownWindowsVersion.AnniversaryUpdate;
             if (version == VERSION_CREATORS)
-                return KnownWindowsVersions.CreatorsUpdate;
+                return KnownWindowsVersion.CreatorsUpdate;
             if (version == VERSION_FALLCREATORS)
-                return KnownWindowsVersions.FallCreatosUpdate;
+                return KnownWindowsVersion.FallCreatosUpdate;
             if (version == VERSION_APRIL2018)
-                return KnownWindowsVersions.April2018Update;
-            return KnownWindowsVersions.October2018Update;
+                return KnownWindowsVersion.April2018Update;
+            return KnownWindowsVersion.October2018Update;
         }
     }
     /// <summary>
     /// Known Windows 10 versions
     /// </summary>
-    public enum KnownWindowsVersions
+    public enum KnownWindowsVersion
     {
         /// <summary>
         /// Represents the RTM. v10.0 Build 10.0.10240

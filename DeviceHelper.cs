@@ -11,7 +11,7 @@ using Windows.System;
 using Windows.System.Profile;
 using Windows.UI.ViewManagement;
 
-namespace UniversalPlatformTools
+namespace LCTWorks.UniversalPlatformTools
 {
     /// <summary>
     /// Provides useful information of the current device.

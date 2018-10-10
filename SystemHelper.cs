@@ -6,7 +6,7 @@ using Windows.Foundation.Metadata;
 using Windows.Graphics.Display;
 using Windows.UI.ViewManagement;
 
-namespace UniversalPlatformTools
+namespace LCTWorks.UniversalPlatformTools
 {
     /// <summary>
     /// Provides some useful information about the current system.

@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.System.Profile;
 
-namespace UniversalPlatformTools
+namespace LCTWorks.UniversalPlatformTools
 {
     /// <summary>
     /// Represents a Windows build, it contains version and commercial information.

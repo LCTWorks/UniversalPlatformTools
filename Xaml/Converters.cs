@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
-namespace UniversalPlatformTools.Xaml
+namespace LCTWorks.UniversalPlatformTools.Xaml
 {
     public class InvertedBooleanToVisibilityConverter : IValueConverter
     {

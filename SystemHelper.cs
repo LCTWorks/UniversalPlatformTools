@@ -14,6 +14,8 @@ namespace UniversalPlatformTools
     /// </summary>
     public static class SystemHelper
     {
+        private const string DARK_THEME_BCKG = "#FF000000";
+        private const string LIGHT_THEME_BCKG = "#FFFFFFFF";
         private static readonly string[] _fontFamilies = new string[] { "Arial", "Calibri", "Cambria", "Comic Sans MS", "Courier New", "Ebrima", "Gadugi", "Georgia", "Leelawadee UI", "Lucida Console", "Malgun Gothic", "Microsoft JhengHei", "Microsoft Yahei", "Nirmala UI", "Segoe Print", "Segoe UI", "SimSun", "Times New Roman", "Trebuchet MS", "Verdana", "Yu Gothic" };
 
         /// <summary>
@@ -69,12 +71,48 @@ namespace UniversalPlatformTools
         }
 
         /// <summary>
+        /// Returns the system theme set by the user.
+        /// </summary>
+        /// <returns></returns>
+        public static SystemTheme GetSystemTheme()
+        {
+            var DefaultTheme = new UISettings();
+            var uiTheme = DefaultTheme.GetColorValue(UIColorType.Background).ToString();
+            if (uiTheme == DARK_THEME_BCKG)
+            {
+                return SystemTheme.Dark;
+            }
+            else if (uiTheme == LIGHT_THEME_BCKG)
+            {
+                return SystemTheme.Light;
+            }
+            return SystemTheme.Unknown;
+        }
+
+        /// <summary>
         /// Returns a collection of font families guaranteed across all Windows 10 versions and devices.
         /// </summary>
         public static ICollection<string> GetStandardFontFamilies()
         {
             return _fontFamilies.ToArray();
         }
-
+    }
+    /// <summary>
+    /// Represents the system themes
+    /// </summary>
+    public enum SystemTheme
+    {
+        /// <summary>
+        /// Light Theme
+        /// </summary>
+        Light,
+        /// <summary>
+        /// Dark Theme
+        /// </summary>
+        Dark,
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        Unknown,
     }
 }

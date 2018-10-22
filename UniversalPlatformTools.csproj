@@ -127,7 +127,6 @@
     <Compile Include="ActionCommand.cs" />
     <Compile Include="BaseNotifier.cs" />
     <Compile Include="StoreLauncher.cs" />
-    <Compile Include="ConvertValue.cs" />
     <Compile Include="UIConvert.cs" />
     <Compile Include="WindowsVersion.cs" />
     <Compile Include="Xaml\Converters.cs" />

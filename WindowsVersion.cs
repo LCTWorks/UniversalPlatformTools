@@ -15,6 +15,7 @@ namespace UniversalPlatformTools
         private static readonly Version VERSION_FALLCREATORS = new Version(10, 0, 16299, 0);
         private static readonly Version VERSION_APRIL2018 = new Version(10, 0, 17134, 0);
         private static readonly Version VERSION_OCTOBER2018 = new Version(10, 0, 17763, 0);
+        private static readonly Version VERSION_MAY2019 = new Version(10, 0, 18362, 0);
         //Add new versions here:
         private static Version[] VERSIONS_SORTED = new[]
         {
@@ -24,7 +25,8 @@ namespace UniversalPlatformTools
             VERSION_CREATORS,
             VERSION_FALLCREATORS,
             VERSION_APRIL2018,
-            VERSION_OCTOBER2018
+            VERSION_OCTOBER2018,
+            VERSION_MAY2019
         };
 
         private static WindowsVersion current;
@@ -149,6 +151,16 @@ namespace UniversalPlatformTools
                             ApiContractLevel = 7,
                         };
                     }
+                case KnownWindowsVersion.May2019Update:
+                    {
+                        return new WindowsVersion()
+                        {
+                            Name = "MAY 2019 Update",
+                            Build = VERSION_MAY2019,
+                            Version = "1903",
+                            ApiContractLevel = 8,
+                        };
+                    }
             }
         }
 
@@ -238,5 +250,9 @@ namespace UniversalPlatformTools
         /// Represents the October (2018) Creators Update. v10.0 Build 17134
         /// </summary>
         October2018Update,
+        /// <summary>
+        /// Represents the May 2019 Update. v10.0 Build 18362
+        /// </summary>
+        May2019Update,
     }
 }
